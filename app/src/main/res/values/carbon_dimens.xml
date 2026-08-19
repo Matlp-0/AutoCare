@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carbon UI — spacing, borders e alturas. -->
+<resources>
+    <dimen name="carbon_space_xs">4dp</dimen>
+    <dimen name="carbon_space_sm">8dp</dimen>
+    <dimen name="carbon_space_md">16dp</dimen>
+    <dimen name="carbon_space_lg">24dp</dimen>
+    <dimen name="carbon_space_xl">32dp</dimen>
+
+    <dimen name="carbon_gutter">20dp</dimen>
+    <dimen name="carbon_divider">1dp</dimen>
+    <dimen name="carbon_rule">2dp</dimen>
+    <dimen name="carbon_radius">2dp</dimen>
+
+    <dimen name="carbon_touch_min">48dp</dimen>
+    <dimen name="carbon_healthbar_height">14dp</dimen>
+    <dimen name="carbon_nav_height">64dp</dimen>
+
+    <item name="carbon_opacity_muted" format="float" type="dimen">0.60</item>
+    <item name="carbon_opacity_ghost" format="float" type="dimen">0.35</item>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Veículo na garagem: foto, apelido, dados técnicos e alça para reordenar. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/carbon_detail_press"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/carbon_touch_min"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/carbon_space_sm"
+    android:paddingBottom="@dimen/carbon_space_sm">
+
+    <View
+        android:id="@+id/viewActiveMark"
+        android:layout_width="3dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="@dimen/carbon_space_sm"
+        android:background="@color/carbon_cyan" />
+
+    <ImageView
+        android:id="@+id/imagePhoto"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="@dimen/carbon_space_sm"
+        android:background="@color/carbon_bg"
+        android:contentDescription="@string/garage_photo"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_car"
+        app:tint="@color/carbon_text_dim" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textName"
+            style="@style/Carbon.Text.Value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/textSpecs"
+            style="@style/Carbon.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/textKm"
+            style="@style/Carbon.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/handleDrag"
+        android:layout_width="@dimen/carbon_touch_min"
+        android:layout_height="@dimen/carbon_touch_min"
+        android:contentDescription="@string/garage_reorder"
+        android:padding="12dp"
+        android:src="@drawable/ic_drag"
+        app:tint="@color/carbon_text_dim" />
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Abastecimento: data e posto à esquerda, total à direita, técnica embaixo. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/carbon_detail_press"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:minHeight="@dimen/carbon_touch_min"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/carbon_space_md"
+        android:paddingBottom="@dimen/carbon_space_md">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/carbon_space_sm">
+
+            <TextView
+                android:id="@+id/textDate"
+                style="@style/Carbon.Text.Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.06"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/textDetails"
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_xs" />
+
+            <TextView
+                android:id="@+id/textStation"
+                style="@style/Carbon.Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textConsumption"
+                style="@style/Carbon.Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/carbon_cyan" />
+
+            <TextView
+                android:id="@+id/textTotal"
+                style="@style/Carbon.Text.Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_xs"
+                android:textColor="@color/carbon_text_primary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.example.myapplication.ui.carbon.CarbonDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

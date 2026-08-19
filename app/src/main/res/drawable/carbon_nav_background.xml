@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra de navegação: superfície grafite com fio ciano no topo. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/carbon_surface_raised" />
+        </shape>
+    </item>
+    <item android:height="@dimen/carbon_divider" android:gravity="top">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/carbon_line_strong" />
+        </shape>
+    </item>
+</layer-list>

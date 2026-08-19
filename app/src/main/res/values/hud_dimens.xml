@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HUD automotivo — geometria. -->
+<resources>
+    <dimen name="hud_chamfer">16dp</dimen>
+    <dimen name="hud_chamfer_small">12dp</dimen>
+    <dimen name="hud_hairline">1dp</dimen>
+
+    <dimen name="hud_gutter">20dp</dimen>
+    <dimen name="hud_panel_padding">18dp</dimen>
+    <dimen name="hud_space_xs">4dp</dimen>
+    <dimen name="hud_space_sm">8dp</dimen>
+    <dimen name="hud_space_md">16dp</dimen>
+    <dimen name="hud_space_lg">24dp</dimen>
+
+    <dimen name="hud_segmentbar_height">10dp</dimen>
+    <dimen name="hud_segment_gap">2dp</dimen>
+
+    <!-- A bottom nav cobre o fim da lista sem esta reserva. -->
+    <dimen name="hud_scroll_bottom_inset">96dp</dimen>
+</resources>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cadastro/edição do veículo no Carbon UI. Campos Material mantidos: a validação continua igual. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/carbon_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Carbon.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/vehicle_form_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/carbon_gutter"
+            android:paddingEnd="@dimen/carbon_gutter"
+            android:paddingBottom="@dimen/carbon_space_lg">
+
+            <TextView
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/carbon_space_md"
+                android:text="@string/vehicle_form_subtitle" />
+
+            <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/carbon_space_md"
+                android:text="@string/garage_identity" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageVehicle"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:background="@color/carbon_surface_raised"
+                    android:contentDescription="@string/garage_photo"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_car"
+                    app:tint="@color/carbon_text_dim" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/carbon_space_md"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/buttonPickPhoto"
+                        style="@style/Carbon.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/garage_photo_pick" />
+
+                    <TextView
+                        android:id="@+id/buttonRemovePhoto"
+                        style="@style/Carbon.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/carbon_space_sm"
+                        android:gravity="center"
+                        android:text="@string/garage_photo_remove"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNickname"
+                style="@style/Carbon.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_md"
+                android:hint="@string/field_nickname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Carbon.Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_xs"
+                android:layout_marginBottom="@dimen/carbon_space_lg"
+                android:text="@string/garage_nickname_hint" />
+
+            <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/carbon_space_md"
+                android:text="@string/carbon_car_info" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBrand"
+                style="@style/Carbon.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/field_brand">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutModel"
+                style="@style/Carbon.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:hint="@string/field_model">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutYear"
+                style="@style/Carbon.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:hint="@string/field_year">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_lg"
+                android:layout_marginBottom="@dimen/carbon_space_md"
+                android:text="@string/carbon_car_specs" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEngine"
+                style="@style/Carbon.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/field_engine">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEngine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFuel"
+                style="@style/Carbon.Input.Dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:hint="@string/field_fuel">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/inputFuel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutTransmission"
+                style="@style/Carbon.Input.Dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:hint="@string/field_transmission">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/inputTransmission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutKm"
+                style="@style/Carbon.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:hint="@string/field_km"
+                app:suffixText="KM">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputKm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/buttonContinue"
+        style="@style/Carbon.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/carbon_gutter"
+        android:text="@string/action_continue" />
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carbon UI — hierarquia tipográfica do HUD. -->
+<resources>
+    <style name="Carbon.Text" parent="">
+        <item name="android:textColor">@color/carbon_text_primary</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- Rótulo de seção: pequeno, caixa alta, muito espaçado -->
+    <style name="Carbon.Text.Label" parent="Carbon.Text">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.22</item>
+        <item name="android:textColor">@color/carbon_cyan</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Título do veículo: presença visual -->
+    <style name="Carbon.Text.Display" parent="Carbon.Text">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Números de painel (km, score) -->
+    <style name="Carbon.Text.Metric" parent="Carbon.Text">
+        <item name="android:textSize">44sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Carbon.Text.MetricSmall" parent="Carbon.Text">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Valor de destaque em linha (status, item) -->
+    <style name="Carbon.Text.Value" parent="Carbon.Text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Carbon.Text.Body" parent="Carbon.Text">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/carbon_text_secondary</item>
+    </style>
+
+    <style name="Carbon.Text.Caption" parent="Carbon.Text">
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textColor">@color/carbon_text_dim</item>
+    </style>
+
+    <!-- Índice 01, 02… da lista -->
+    <style name="Carbon.Text.Index" parent="Carbon.Text">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0.10</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/carbon_cyan_dim</item>
+    </style>
+
+    <!-- Navegação inferior -->
+    <style name="Carbon.Nav.Label" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Carbon.Nav.Label.Active" parent="Carbon.Nav.Label">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Mata a pill do Material: o estado selecionado vira linha inferior -->
+    <style name="Carbon.Nav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+        <item name="android:width">0dp</item>
+        <item name="android:height">0dp</item>
+    </style>
+
+    <!-- Botão de ação: geometria reta, sem pill -->
+    <style name="Carbon.Fab.Shape" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <!-- Controle de ação (não-Material) -->
+    <style name="Carbon.Button" parent="Carbon.Text.Value">
+        <item name="android:background">@drawable/carbon_button_bg</item>
+        <item name="android:minHeight">@dimen/carbon_touch_min</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/carbon_space_md</item>
+        <item name="android:paddingEnd">@dimen/carbon_space_md</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/carbon_text_primary</item>
+    </style>
+</resources>

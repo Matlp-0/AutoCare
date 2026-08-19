@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HUD automotivo — variante clara.
+
+  Os valores canônicos do tema são os escuros (values-night/hud_colors.xml): esta
+  variante existe porque o app oferece as três opções de aparência em "Meu carro".
+  Mesmos papéis, contraste invertido; o acento continua único por vez.
+
+  inkDim sobre panel precisa passar 4.5:1 em texto de corpo. Aqui: 6.2:1.
+-->
+<resources>
+    <color name="hud_bg0">#FFF3F5F8</color>
+    <color name="hud_bg1">#FFE6EAF0</color>
+    <color name="hud_panel">#D1FFFFFF</color>
+    <color name="hud_line">#14000000</color>
+    <color name="hud_ink">#FF0B0F14</color>
+    <color name="hud_ink_dim">#FF56616F</color>
+
+    <!-- Ciano/âmbar/vermelho puros não têm contraste em fundo claro: versões fechadas. -->
+    <color name="hud_accent_cyan">#FF0E7490</color>
+    <color name="hud_accent_amber">#FFB45309</color>
+    <color name="hud_accent_red">#FFC0392B</color>
+</resources>

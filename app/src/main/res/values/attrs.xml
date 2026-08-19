@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChamferPanel">
+        <!-- Tamanho do corte a 45° nos cantos superior-esquerdo e inferior-direito. -->
+        <attr name="chamfer" format="dimension" />
+        <!--
+          O glow usa BlurMaskFilter, que exige LAYER_TYPE_SOFTWARE. Por isso é opt-in:
+          ligue só no painel hero, nunca em item de RecyclerView.
+        -->
+        <attr name="glow" format="boolean" />
+        <!-- Hairline no acento (hero) ou na cor estrutural (demais painéis). -->
+        <attr name="hairlineAccent" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SegmentBar">
+        <attr name="segmentCount" format="integer" />
+    </declare-styleable>
+</resources>

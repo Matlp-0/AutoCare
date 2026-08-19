@@ -1,0 +1,302 @@
+<resources>
+    <string name="app_name">AutoCare</string>
+
+    <!-- Onboarding -->
+    <string name="welcome_title">Cuide melhor do seu carro.</string>
+    <string name="welcome_subtitle">Organize revisões, manutenções e documentos em um só lugar.</string>
+    <string name="welcome_start">Começar</string>
+
+    <!-- Cadastro -->
+    <string name="vehicle_form_title">Cadastro do veículo</string>
+    <string name="vehicle_form_subtitle">Precisamos de alguns dados para montar o plano de manutenção.</string>
+    <string name="field_brand">Marca</string>
+    <string name="field_model">Modelo</string>
+    <string name="field_year">Ano</string>
+    <string name="field_engine">Motorização</string>
+    <string name="field_fuel">Combustível</string>
+    <string name="field_transmission">Câmbio</string>
+    <string name="field_km">Quilometragem atual</string>
+    <string name="action_continue">Continuar</string>
+    <string name="action_save">Salvar</string>
+    <string name="error_required">Campo obrigatório</string>
+    <string name="error_year_invalid">Ano inválido</string>
+    <string name="error_km_invalid">Quilometragem inválida</string>
+
+    <!-- Identificação -->
+    <string name="identification_title">Identificamos seu veículo</string>
+    <string name="identification_plan">Plano de manutenção do fabricante</string>
+    <string name="identification_confirm">Confirmar e continuar</string>
+    <string name="identification_no_plan">Não encontramos o plano de revisões deste modelo. Você pode continuar: registre suas manutenções normalmente e tente a busca de novo depois.</string>
+    <string name="identification_searching">Buscando o plano de revisões do fabricante na internet…</string>
+    <string name="identification_search_online">Buscar manual online novamente</string>
+    <string name="identification_source_web">Plano obtido de %1$s</string>
+    <string name="identification_offline">Sem conexão: usando o plano local. Toque para tentar online.</string>
+    <string name="identification_plan_items">%1$d revisões encontradas para o seu veículo</string>
+    <string name="plan_updated">Plano do fabricante atualizado</string>
+    <string name="plan_not_found">Não encontramos a tabela de revisões deste modelo.</string>
+    <string name="car_update_plan">Atualizar plano do fabricante</string>
+
+    <!-- Navegação -->
+    <string name="nav_home">Início</string>
+    <string name="nav_maintenance">Manutenções</string>
+    <string name="nav_schedule">Revisões</string>
+    <string name="nav_car">Carro</string>
+
+    <!-- Home -->
+    <string name="home_next_maintenance">Próxima manutenção</string>
+    <string name="home_next_none">Nada previsto por enquanto</string>
+    <string name="home_status">Status do carro</string>
+    <string name="home_upcoming">Próximas manutenções</string>
+    <string name="home_details">Ver detalhes</string>
+    <string name="home_health">Saúde do veículo</string>
+    <string name="home_empty">Nada previsto ainda. Registre uma manutenção para o app começar a calcular.</string>
+
+    <!-- Histórico -->
+    <string name="history_title">Histórico</string>
+    <string name="history_empty">Nenhuma manutenção registrada. Toque em + para adicionar.</string>
+    <string name="history_total">Total gasto</string>
+
+    <!-- Revisões -->
+    <string name="schedule_title">Revisões</string>
+    <string name="schedule_mark_done">Revisão realizada</string>
+    <string name="schedule_marked_by_user">Marcada por você</string>
+    <string name="schedule_from_history">Detectada pelo histórico</string>
+    <string name="schedule_empty">Ainda não temos o cronograma deste modelo.</string>
+
+    <!-- Meu carro -->
+    <string name="car_title">Meu carro</string>
+    <string name="car_edit">Editar dados</string>
+    <string name="car_last_maintenance">Última manutenção</string>
+    <string name="car_next_revision">Próxima revisão</string>
+    <string name="car_total_spent">Total gasto</string>
+    <string name="car_maintenance_count">Manutenções</string>
+    <string name="car_update_km">Atualizar quilometragem</string>
+
+    <!-- Adicionar manutenção -->
+    <string name="add_title">Adicionar manutenção</string>
+    <string name="add_manual">Inserir manualmente</string>
+    <string name="add_import">Importar nota fiscal</string>
+    <string name="add_photo">Tirar foto</string>
+    <string name="add_pdf">Selecionar PDF</string>
+    <string name="add_xml">Selecionar XML</string>
+    <string name="field_date">Data</string>
+    <string name="field_type">Tipo de manutenção</string>
+    <string name="field_description">Descrição</string>
+    <string name="field_value">Valor</string>
+    <string name="field_workshop">Oficina</string>
+    <string name="field_notes">Observações</string>
+    <string name="action_save_maintenance">Salvar manutenção</string>
+    <string name="maintenance_saved">Manutenção salva</string>
+
+    <!-- Importação -->
+    <string name="import_title">Importar nota fiscal</string>
+    <string name="import_subtitle">Escolha como deseja adicionar sua nota.</string>
+    <string name="import_xml">XML</string>
+    <string name="import_pdf">PDF</string>
+    <string name="import_photo">Foto</string>
+    <string name="import_processing">Processando documento…</string>
+    <string name="import_ocr_unavailable">Leitura automática de PDF/foto ainda não disponível. O documento foi anexado — confira e complete os dados.</string>
+
+    <!-- Confirmação -->
+    <string name="confirm_title">Encontramos estas informações</string>
+    <string name="confirm_subtitle">Revise antes de salvar. Nada é gravado sem sua confirmação.</string>
+    <string name="confirm_action">Confirmar manutenção</string>
+    <string name="confirm_products">Produtos identificados</string>
+
+    <!-- Detalhe -->
+    <string name="detail_title">Detalhe da manutenção</string>
+    <string name="detail_items">Peças e serviços</string>
+    <string name="detail_document">Documento relacionado</string>
+    <string name="detail_no_document">Nenhum documento anexado</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_delete">Excluir</string>
+    <string name="edit_maintenance_title">Editar manutenção</string>
+    <string name="maintenance_updated">Manutenção atualizada</string>
+    <string name="maintenance_deleted">Manutenção excluída</string>
+    <string name="delete_confirm_title">Excluir manutenção?</string>
+    <string name="delete_confirm_message">Esta manutenção, suas peças e o documento anexado serão removidos definitivamente. Não é possível desfazer.</string>
+
+    <!-- Notificações -->
+    <string name="notification_channel_name">Alertas de manutenção</string>
+    <string name="notification_channel_description">Avisos sobre revisões e manutenções do seu veículo</string>
+
+    <!-- Carbon UI (Home) -->
+    <string name="carbon_home_header">Início</string>
+    <string name="carbon_status">Status</string>
+    <string name="carbon_next">Próxima manutenção</string>
+    <string name="carbon_details">Ver cronograma ›</string>
+    <string name="carbon_health">Saúde do veículo</string>
+    <string name="carbon_history">Histórico</string>
+    <string name="carbon_history_count">%1$02d manutenções</string>
+    <string name="carbon_upcoming">Próximas manutenções</string>
+    <string name="carbon_score">%1$d / 100</string>
+    <string name="carbon_score_empty">— / 100</string>
+    <string name="carbon_status_ok">Em dia</string>
+    <string name="carbon_status_soon">Atenção</string>
+    <string name="carbon_status_late">Atrasada</string>
+    <string name="carbon_status_unknown">Sem dados</string>
+
+    <!-- Carbon UI (Manutenções) -->
+    <string name="carbon_maintenance_title">Manutenções</string>
+    <string name="carbon_section_history">Histórico do veículo</string>
+    <string name="carbon_section_planned">Planejado</string>
+    <string name="carbon_tab_all">Todas</string>
+    <string name="carbon_tab_pending">Pendentes</string>
+    <string name="carbon_tab_done">Concluídas</string>
+    <string name="carbon_section_pending">Pendentes</string>
+    <string name="carbon_section_completed">Concluídas</string>
+    <string name="carbon_status_done">Concluída</string>
+    <string name="carbon_forecast">Trocar aos %1$s do hodômetro</string>
+    <string name="carbon_last_done">última em %1$s</string>
+    <string name="carbon_total_spent">Total gasto</string>
+    <string name="carbon_pending_count">Itens previstos</string>
+    <string name="carbon_count_value">%1$02d</string>
+    <string name="carbon_empty_pending">Nenhuma manutenção prevista por enquanto.</string>
+    <string name="carbon_empty_done">Nenhuma manutenção registrada. Toque em + para adicionar.</string>
+
+    <!-- Carbon UI (Carro / tema) -->
+    <string name="carbon_cancel">Cancelar</string>
+    <string name="carbon_import_source">Origem do documento</string>
+    <string name="carbon_detail_data">Dados do registro</string>
+    <string name="carbon_car_info">Informações</string>
+    <string name="carbon_car_specs">Especificações</string>
+    <string name="carbon_car_maintenance">Manutenção</string>
+    <string name="carbon_car_actions">Ações</string>
+    <string name="carbon_theme_title">Aparência</string>
+    <string name="carbon_theme_system">Sistema</string>
+    <string name="carbon_theme_light">Claro</string>
+    <string name="carbon_theme_dark">Escuro</string>
+
+    <!-- Onboarding e ajuda ao usuário novo -->
+    <string name="carbon_revision_done">Realizada</string>
+    <string name="carbon_revision_next">Próxima</string>
+    <string name="carbon_revision_future">Futuramente</string>
+    <string name="carbon_revision_late">Atrasada</string>
+    <string name="carbon_revision_no_record">Não informada</string>
+    <string name="carbon_see_all">Ver todas ›</string>
+    <string name="carbon_first_steps">Comece aqui</string>
+    <string name="carbon_step_plan_ok">1. Plano do fabricante carregado</string>
+    <string name="carbon_step_plan_missing">1. Buscar o plano do seu modelo</string>
+    <string name="carbon_step_register">2. Registre a última manutenção que você fez</string>
+    <string name="carbon_step_track">3. O app avisa quando chegar a hora</string>
+    <string name="carbon_action_register">Registrar manutenção</string>
+    <string name="carbon_action_export_pdf">Baixar histórico (PDF)</string>
+    <string name="export_pdf_empty">Nenhuma manutenção registrada para exportar</string>
+    <string name="export_pdf_running">Gerando PDF…</string>
+    <string name="export_pdf_title">PDF salvo</string>
+    <string name="export_pdf_message">Histórico completo salvo na pasta Downloads.</string>
+    <string name="export_pdf_open">Abrir</string>
+    <string name="export_pdf_error">Falha ao gerar o PDF: %1$s</string>
+    <string name="export_pdf_no_viewer">Nenhum app instalado para abrir PDF</string>
+    <string name="carbon_action_find_plan">Buscar plano do fabricante</string>
+    <string name="carbon_km_hint">Toque para atualizar a quilometragem</string>
+
+    <!-- Subtítulos que explicam cada aba -->
+    <string name="carbon_subtitle_home">Situação do seu carro agora</string>
+    <string name="carbon_subtitle_maintenance">O que já foi feito e o que está por vir</string>
+    <string name="carbon_subtitle_schedule">Cronograma do fabricante por quilometragem</string>
+    <string name="carbon_subtitle_car">Dados do veículo e ajustes</string>
+
+    <!-- Dicas nos itens -->
+    <string name="carbon_hint_mark_done">Já fez? Marque abaixo</string>
+    <string name="carbon_option_manual_hint">Você digita os dados</string>
+    <string name="carbon_option_import_hint">Lemos a nota e você confirma</string>
+    <string name="carbon_option_photo_hint">Foto da nota impressa</string>
+    <string name="carbon_option_pdf_hint">Arquivo PDF da nota</string>
+    <string name="carbon_option_xml_hint">Arquivo XML da nota fiscal</string>
+
+    <!-- HUD automotivo: o acento da tela vem do estado de manutenção. -->
+    <string name="st_em_dia">Em dia</string>
+    <string name="st_proximo">Próximo</string>
+    <string name="st_atrasado">Atrasado</string>
+
+    <string name="hud_km_unit">km</string>
+    <string name="hud_health">Saúde %1$d / 100</string>
+    <string name="hud_health_empty">Saúde — / 100</string>
+    <string name="hud_odometer_desc">Hodômetro: %1$s. Toque para atualizar.</string>
+
+    <!-- Combustível e hodômetro -->
+    <string name="nav_fuel">Combustível</string>
+    <string name="carbon_fuel_title">Combustível</string>
+    <string name="carbon_subtitle_fuel">Consumo, custo e ritmo de uso do carro</string>
+    <string name="fuel_average_consumption">Consumo médio (entre tanques cheios)</string>
+    <string name="fuel_last_consumption">Último trecho</string>
+    <string name="fuel_range">Autonomia estimada</string>
+    <string name="fuel_cost_per_km">Custo por km</string>
+    <string name="fuel_spent_30">Gasto nos últimos 30 dias</string>
+    <string name="fuel_average_price">Preço médio por litro</string>
+    <string name="fuel_usage_section">Ritmo de uso</string>
+    <string name="fuel_km_per_day">Média diária</string>
+    <string name="fuel_km_per_month">Média mensal</string>
+    <string name="fuel_last_reading">Última leitura</string>
+    <string name="fuel_reading_value">%1$s em %2$s</string>
+    <string name="fuel_usage_ready">Baseado em %1$d leituras do hodômetro. Os prazos em km viram datas no cronograma.</string>
+    <string name="fuel_usage_pending">Registre a quilometragem em datas diferentes (ou abasteça) para o app estimar quanto você roda por dia.</string>
+    <string name="fuel_history_section">Abastecimentos</string>
+    <string name="fuel_empty">Nenhum abastecimento registrado. O consumo aparece a partir do segundo tanque cheio.</string>
+    <string name="fuel_add">Registrar abastecimento</string>
+    <string name="fuel_edit">Editar abastecimento</string>
+    <string name="fuel_saved">Abastecimento salvo</string>
+    <string name="fuel_deleted">Abastecimento excluído</string>
+    <string name="fuel_delete_message">O abastecimento e a leitura de hodômetro dele serão removidos.</string>
+    <string name="fuel_no_data">—</string>
+    <string name="fuel_dash">—</string>
+    <string name="fuel_row_details">%1$s • %2$s • %3$s</string>
+    <string name="fuel_partial_tag">Parcial</string>
+    <string name="fuel_full_tank">Enchi o tanque</string>
+    <string name="fuel_full_tank_hint">O consumo só é calculado entre dois abastecimentos de tanque cheio.</string>
+    <string name="fuel_missed_previous">Deixei de registrar um abastecimento anterior</string>
+    <string name="fuel_total_hint">Informe litros e preço, ou litros e total: o campo que faltar é calculado.</string>
+    <string name="field_fuel_type">Combustível</string>
+    <string name="field_liters">Litros</string>
+    <string name="field_price_per_liter">Preço por litro</string>
+    <string name="field_total_paid">Total pago</string>
+    <string name="field_station">Posto</string>
+    <string name="error_liters_invalid">Informe quantos litros foram abastecidos</string>
+    <string name="error_no_vehicle">Cadastre um veículo antes</string>
+    <string name="add_refuel">Abastecimento</string>
+    <string name="carbon_option_refuel_hint">Litros, preço e km — alimenta consumo e custo por km</string>
+    <string name="notification_km_title">Atualize a quilometragem</string>
+    <string name="notification_km_message">A última leitura do hodômetro tem %1$d dias. Sem ela, os alertas de manutenção por km atrasam.</string>
+    <string name="notification_km_message_pace">A última leitura tem %1$d dias — no seu ritmo, cerca de %2$s já rodados. Atualize para os alertas continuarem certos.</string>
+
+    <!-- Garagem (barra lateral) -->
+    <string name="garage_title">Garagem</string>
+    <string name="garage_subtitle">Toque para trocar o veículo em foco</string>
+    <string name="garage_open">Abrir garagem</string>
+    <string name="garage_add">Adicionar veículo</string>
+    <string name="garage_delete_title">Excluir %1$s?</string>
+    <string name="garage_delete_message">Manutenções, abastecimentos, leituras de km e documentos deste veículo serão apagados.</string>
+    <string name="garage_delete_last">Não dá para excluir o único veículo cadastrado. Cadastre outro antes.</string>
+    <string name="garage_deleted">Veículo excluído</string>
+    <string name="garage_identity">Identidade</string>
+    <string name="garage_photo">Foto do veículo</string>
+    <string name="garage_photo_pick">Escolher foto</string>
+    <string name="garage_photo_remove">Remover foto</string>
+    <string name="garage_photo_error">Não foi possível usar essa imagem</string>
+    <string name="garage_reorder">Arrastar para reordenar</string>
+    <string name="field_nickname">Apelido (opcional)</string>
+    <string name="garage_nickname_hint">Aparece no lugar de marca e modelo na garagem e nos avisos.</string>
+
+    <!-- Painel financeiro -->
+    <string name="finance_title">Painel financeiro</string>
+    <string name="finance_open">Painel financeiro</string>
+    <string name="finance_cost_per_km_caption">Custo por quilômetro (manutenção + combustível)</string>
+    <string name="finance_composition">Composição do gasto</string>
+    <string name="finance_maintenance">Manutenção</string>
+    <string name="finance_fuel">Combustível</string>
+    <string name="finance_total">Gasto total</string>
+    <string name="finance_monthly_average">Média por mês</string>
+    <string name="finance_current_month">Mês atual</string>
+    <string name="finance_projection">Projeção de 12 meses</string>
+    <string name="finance_projection_km">%1$s por ano</string>
+    <string name="finance_base">Base: %1$s rodados entre %2$s e %3$s, em %4$d manutenções e %5$d abastecimentos.</string>
+    <string name="finance_base_empty">Sem quilometragem suficiente para calcular custo por km. Registre a km nas manutenções e abastecimentos.</string>
+    <string name="finance_monthly">Últimos 12 meses</string>
+    <string name="finance_monthly_peak">Maior mês: %1$s</string>
+    <string name="finance_categories">Onde o dinheiro foi</string>
+    <string name="finance_category_value">%1$s (%2$d%%)</string>
+    <string name="finance_empty">Nenhum gasto registrado ainda. Manutenções e abastecimentos alimentam este painel.</string>
+    <string name="carbon_others_label">Outros</string>
+    <string name="finance_share">%1$d%% do total</string>
+</resources>

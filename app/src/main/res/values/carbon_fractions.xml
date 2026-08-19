@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carbon UI — opacidades reutilizáveis. -->
+<resources>
+    <fraction name="carbon_alpha_muted">60%</fraction>
+    <fraction name="carbon_alpha_ghost">35%</fraction>
+</resources>

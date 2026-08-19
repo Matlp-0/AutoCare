@@ -1,0 +1,30 @@
+<resources>
+    <!-- Tema escuro do app: usado quando o modo noturno está ativo. -->
+    <style name="Theme.MyApplication" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryContainer">@color/brand_primary_light</item>
+        <item name="colorOnPrimaryContainer">@color/text_primary</item>
+        <item name="colorSecondary">@color/brand_primary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryContainer">@color/brand_primary_light</item>
+        <item name="colorOnSecondaryContainer">@color/text_primary</item>
+        <item name="colorTertiary">@color/brand_primary</item>
+        <item name="colorTertiaryContainer">@color/brand_primary_light</item>
+        <item name="colorOnTertiaryContainer">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/brand_primary_light</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="android:statusBarColor">@color/carbon_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/carbon_surface_raised</item>
+        <!-- Carbon UI aplicado às telas internas -->
+        <item name="android:windowBackground">@color/carbon_bg</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Carbon.Dialog</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Carbon.BottomSheet</item>
+        <item name="textInputStyle">@style/Carbon.Input</item>
+    </style>
+</resources>

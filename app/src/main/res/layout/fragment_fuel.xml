@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Combustível no Carbon UI: consumo, custo e ritmo de uso calculados a partir
+  dos abastecimentos, seguidos do extrato de abastecimentos.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/carbon_bg"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/carbon_gutter"
+    android:paddingTop="@dimen/carbon_space_lg"
+    android:paddingEnd="@dimen/carbon_gutter">
+
+    <com.example.myapplication.ui.carbon.CarbonSectionTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/carbon_fuel_title" />
+
+    <TextView
+        style="@style/Carbon.Text.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/carbon_space_xs"
+        android:text="@string/carbon_subtitle_fuel" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="96dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textConsumption"
+                    style="@style/Carbon.Text.Metric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/carbon_space_md" />
+
+                <TextView
+                    android:id="@+id/textConsumptionCaption"
+                    style="@style/Carbon.Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fuel_average_consumption" />
+
+                <com.example.myapplication.ui.carbon.CarbonDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowLastConsumption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowCostPerKm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowSpent30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowPricePerLiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/carbon_space_sm"
+                    android:text="@string/fuel_usage_section" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowKmPerDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowKmPerMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+                    android:id="@+id/rowCurrentKm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textUsageHint"
+                    style="@style/Carbon.Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/carbon_space_xs" />
+
+                <TextView
+                    android:id="@+id/buttonUpdateKm"
+                    style="@style/Carbon.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/carbon_space_sm"
+                    android:text="@string/car_update_km" />
+
+                <TextView
+                    android:id="@+id/buttonAddRefuel"
+                    style="@style/Carbon.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/carbon_space_sm"
+                    android:text="@string/fuel_add" />
+
+                <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/carbon_space_lg"
+                    android:text="@string/fuel_history_section" />
+
+                <TextView
+                    android:id="@+id/textEmptyFuel"
+                    style="@style/Carbon.Text.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/carbon_space_md"
+                    android:text="@string/fuel_empty"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerRefuels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Telas ainda em Material: variante escura das cores base. -->
+<resources>
+    <color name="background">#0C1216</color>
+    <color name="surface">#131C22</color>
+    <color name="outline">#27373F</color>
+    <color name="text_primary">#F2F5F7</color>
+    <color name="text_secondary">#9AA8B2</color>
+
+    <color name="brand_primary">#4E9BFF</color>
+    <color name="brand_primary_dark">#2C6FD1</color>
+    <color name="brand_primary_light">#16283A</color>
+</resources>

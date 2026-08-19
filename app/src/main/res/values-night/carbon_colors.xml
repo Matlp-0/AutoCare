@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carbon UI — tema escuro (HUD noturno). Referência visual original. -->
+<resources>
+    <color name="carbon_bg">#06090B</color>
+    <color name="carbon_surface">#0C1216</color>
+    <color name="carbon_surface_raised">#101A20</color>
+    <color name="carbon_petrol">#123039</color>
+
+    <color name="carbon_cyan">#1FD3C4</color>
+    <color name="carbon_cyan_dim">#126F6A</color>
+    <color name="carbon_line">#1A262C</color>
+    <color name="carbon_line_strong">#27373F</color>
+
+    <color name="carbon_text_primary">#FFFFFF</color>
+    <color name="carbon_text_secondary">#8B9AA4</color>
+    <color name="carbon_text_dim">#5A6A74</color>
+
+    <color name="carbon_accent">#E8FF3A</color>
+    <color name="carbon_alert">#FF5A4D</color>
+
+    <color name="carbon_nav_selected">#141F26</color>
+</resources>

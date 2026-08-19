@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HUD automotivo — variante escura (canônica, "vidro projetado").
+
+  panel tem ~82% de alpha de propósito: o gradiente e o bloom do fundo precisam
+  atravessar a superfície, senão o painel vira um retângulo chapado.
+
+  inkDim sobre panel composto: 4.83:1.
+-->
+<resources>
+    <color name="hud_bg0">#FF0A0B0D</color>
+    <color name="hud_bg1">#FF12141A</color>
+    <color name="hud_panel">#D1181B22</color>
+    <color name="hud_line">#12FFFFFF</color>
+    <color name="hud_ink">#FFE8ECF2</color>
+    <color name="hud_ink_dim">#FF7D8694</color>
+
+    <color name="hud_accent_cyan">#FF22D3EE</color>
+    <color name="hud_accent_amber">#FFFFB020</color>
+    <color name="hud_accent_red">#FFFF4A3D</color>
+</resources>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Carro no Carbon UI: ficha técnica do veículo.
+  Só campos que existem no cadastro — nada é inventado.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/carbon_bg"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/carbon_gutter"
+        android:paddingTop="@dimen/carbon_space_lg"
+        android:paddingEnd="@dimen/carbon_gutter">
+
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_title" />
+
+        <TextView
+            style="@style/Carbon.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xs"
+            android:text="@string/carbon_subtitle_car" />
+
+        <TextView
+            android:id="@+id/textVehicleName"
+            style="@style/Carbon.Text.Display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_md" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textVehicleYear"
+                style="@style/Carbon.Text.Value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/carbon_text_secondary" />
+
+            <TextView
+                android:id="@+id/textVehicleEngine"
+                style="@style/Carbon.Text.Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textColor="@color/carbon_text_secondary" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/carbon_rule"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:background="@color/carbon_cyan" />
+
+        <TextView
+            android:id="@+id/textVehicleKm"
+            style="@style/Carbon.Text.Metric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_md"
+            android:textAllCaps="true" />
+
+        <!-- INFORMAÇÕES -->
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xl"
+            android:text="@string/carbon_car_info" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/field_brand" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/field_model" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/field_year" />
+
+        <!-- ESPECIFICAÇÕES -->
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xl"
+            android:text="@string/carbon_car_specs" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowEngine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/field_engine" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowTransmission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/field_transmission" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowFuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/field_fuel" />
+
+        <!-- MANUTENÇÃO -->
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xl"
+            android:text="@string/carbon_car_maintenance" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowLastMaintenance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/car_last_maintenance" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowNextRevision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_next_revision" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowTotalSpent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_total_spent" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+            android:id="@+id/rowMaintenanceCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_maintenance_count" />
+
+        <!-- AÇÕES -->
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xl"
+            android:text="@string/carbon_car_actions" />
+
+        <TextView
+            android:id="@+id/buttonEdit"
+            style="@style/Carbon.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/car_edit" />
+
+        <TextView
+            android:id="@+id/buttonUpdateKm"
+            style="@style/Carbon.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/car_update_km" />
+
+        <TextView
+            android:id="@+id/buttonFinance"
+            style="@style/Carbon.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/finance_open" />
+
+        <TextView
+            android:id="@+id/buttonUpdatePlan"
+            style="@style/Carbon.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/car_update_plan" />
+
+        <TextView
+            android:id="@+id/textPlanSource"
+            style="@style/Carbon.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm" />
+
+        <!-- APARÊNCIA -->
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xl"
+            android:text="@string/carbon_theme_title" />
+
+        <com.example.myapplication.ui.carbon.CarbonFilterTabs
+            android:id="@+id/themeTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carbon UI — durações. Movimento discreto, nunca lento. -->
+<resources>
+    <integer name="carbon_duration_press">120</integer>
+    <integer name="carbon_duration_state">180</integer>
+    <integer name="carbon_duration_nav">220</integer>
+    <dimen name="carbon_shift">10dp</dimen>
+</resources>

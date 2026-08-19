@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Glow e atmosfera são vocabulário de tela escura: em fundo claro só sujam.
+  values-night/ liga; o default (claro) mantém desligado.
+-->
+<resources>
+    <bool name="hud_glow_enabled">false</bool>
+</resources>

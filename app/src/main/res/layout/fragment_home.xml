@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Home no tema HUD automotivo.
+
+  Os três blocos anteriores (identidade+odômetro, status, saúde) diziam a mesma
+  coisa de três formas: colapsaram num painel hero único. O estado de manutenção
+  aparece uma vez só, na StatusTag.
+
+  A inclinação de 1,2° vale só para o hero — o painel gira -1.2 e o conteúdo
+  volta +1.2 para o texto ficar reto. Inclinar o resto vira ruído.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hud_bg0"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:paddingBottom="@dimen/hud_scroll_bottom_inset"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/hud_gutter"
+        android:paddingTop="@dimen/hud_space_lg"
+        android:paddingEnd="@dimen/hud_gutter">
+
+        <!-- ================= PAINEL HERO ================= -->
+        <com.example.myapplication.ui.hud.ChamferPanel
+            android:id="@+id/heroPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hud_space_sm"
+            android:rotation="-1.2"
+            app:chamfer="@dimen/hud_chamfer"
+            app:glow="true"
+            app:hairlineAccent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/hud_panel_padding"
+                android:rotation="1.2">
+
+                <TextView
+                    android:id="@+id/textVehicleName"
+                    style="@style/Hud.Text.VehicleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textVehicleSpecs"
+                    style="@style/Hud.Text.Spec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" />
+
+                <!--
+                  Odômetro: JetBrains Mono com tnum. A unidade é uma View separada
+                  para alinhar pela base sem entrar na medida tabular do número.
+                -->
+                <LinearLayout
+                    android:id="@+id/odometerRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/hud_space_md"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/textOdometer"
+                        style="@style/Hud.Text.Odometer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textOdometerUnit"
+                        style="@style/Hud.Text.Unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="@string/hud_km_unit" />
+                </LinearLayout>
+
+                <com.example.myapplication.ui.hud.SegmentBar
+                    android:id="@+id/segmentBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hud_segmentbar_height"
+                    android:layout_marginTop="@dimen/hud_space_md" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/hud_space_md"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textHealthLabel"
+                        style="@style/Hud.Text.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <com.example.myapplication.ui.hud.StatusTag
+                        android:id="@+id/statusTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.example.myapplication.ui.hud.ChamferPanel>
+
+        <TextView
+            android:id="@+id/textHealthReasons"
+            style="@style/Hud.Text.Spec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hud_space_sm"
+            android:letterSpacing="0.06"
+            android:textAllCaps="false" />
+
+        <!-- ===== A partir daqui ainda é Carbon UI: migra nas fases 2 e 3. ===== -->
+
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xl"
+            android:text="@string/carbon_next" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_md"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textNextTitle"
+                style="@style/Carbon.Text.Value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:paddingEnd="@dimen/carbon_space_sm" />
+
+            <TextView
+                android:id="@+id/textNextRemaining"
+                style="@style/Hud.Text.Mono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm" />
+
+        <TextView
+            android:id="@+id/buttonDetails"
+            style="@style/Hud.Text.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/carbon_touch_min"
+            android:layout_gravity="end"
+            android:background="@drawable/carbon_detail_press"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical|end"
+            android:paddingStart="@dimen/carbon_space_md"
+            android:text="@string/carbon_details" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_md"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Hud.Text.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/carbon_history" />
+
+            <TextView
+                android:id="@+id/textHistoryCount"
+                style="@style/Hud.Text.Mono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hud_ink_dim" />
+        </LinearLayout>
+
+        <!-- Primeiros passos: aparece só enquanto não existe histórico -->
+        <LinearLayout
+            android:id="@+id/groupFirstSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_xl"
+                android:text="@string/carbon_first_steps" />
+
+            <TextView
+                android:id="@+id/textStepPlan"
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_md"
+                android:textColor="@color/carbon_text_primary" />
+
+            <TextView
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_xs"
+                android:text="@string/carbon_step_register"
+                android:textColor="@color/carbon_text_primary" />
+
+            <TextView
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_xs"
+                android:text="@string/carbon_step_track" />
+
+            <TextView
+                android:id="@+id/buttonFirstAction"
+                style="@style/Carbon.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_md"
+                android:text="@string/carbon_action_register" />
+        </LinearLayout>
+
+        <com.example.myapplication.ui.carbon.CarbonSectionTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xl"
+            android:text="@string/carbon_upcoming" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerUpcoming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/buttonSeeAll"
+            style="@style/Hud.Text.Label"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/carbon_touch_min"
+            android:background="@drawable/carbon_detail_press"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical|end"
+            android:text="@string/carbon_see_all"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textEmpty"
+            style="@style/Carbon.Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_md"
+            android:text="@string/home_empty"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

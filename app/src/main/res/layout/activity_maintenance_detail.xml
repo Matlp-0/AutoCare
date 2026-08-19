@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Detalhe da manutenção no Carbon UI: ficha do registro. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/carbon_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Carbon.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/detail_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/carbon_gutter"
+            android:paddingEnd="@dimen/carbon_gutter"
+            android:paddingBottom="@dimen/carbon_space_lg">
+
+            <TextView
+                android:id="@+id/textTitle"
+                style="@style/Carbon.Text.Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textSubtitle"
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_xs"
+                android:letterSpacing="0.06"
+                android:textAllCaps="true"
+                android:textColor="@color/carbon_text_primary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/carbon_rule"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:background="@color/carbon_cyan" />
+
+            <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_lg"
+                android:text="@string/detail_items" />
+
+            <TextView
+                android:id="@+id/textItems"
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:textColor="@color/carbon_text_primary" />
+
+            <com.example.myapplication.ui.carbon.CarbonSectionTitle
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_lg"
+                android:text="@string/carbon_detail_data" />
+
+            <TextView
+                android:id="@+id/textDetails"
+                style="@style/Carbon.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm"
+                android:lineSpacingExtra="4dp" />
+
+            <com.example.myapplication.ui.carbon.CarbonDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_md" />
+
+            <TextView
+                android:id="@+id/textDocument"
+                style="@style/Carbon.Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/carbon_space_sm" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Manutenções no Carbon UI: central técnica.
+  Mesma origem de dados de antes (histórico) + pendentes já calculados pelo motor.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/carbon_bg"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/carbon_gutter"
+    android:paddingTop="@dimen/carbon_space_lg"
+    android:paddingEnd="@dimen/carbon_gutter">
+
+    <com.example.myapplication.ui.carbon.CarbonSectionTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/carbon_maintenance_title" />
+
+    <TextView
+        style="@style/Carbon.Text.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/carbon_space_xs"
+        android:text="@string/carbon_subtitle_maintenance" />
+
+    <com.example.myapplication.ui.carbon.CarbonFilterTabs
+        android:id="@+id/filterTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/carbon_space_md" />
+
+    <com.example.myapplication.ui.carbon.CarbonTechnicalRow
+        android:id="@+id/rowSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/carbon_space_sm" />
+
+    <TextView
+        android:id="@+id/buttonExportPdf"
+        style="@style/Carbon.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/carbon_space_sm"
+        android:text="@string/carbon_action_export_pdf" />
+
+    <com.example.myapplication.ui.carbon.CarbonDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="96dp"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/groupEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:paddingBottom="96dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textEmpty"
+            style="@style/Carbon.Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/history_empty" />
+
+        <TextView
+            android:id="@+id/buttonEmptyAction"
+            style="@style/Carbon.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_md"
+            android:text="@string/carbon_action_register" />
+    </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

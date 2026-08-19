@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HUD automotivo — tipografia.
+
+  Duas famílias e nada mais: Barlow Condensed para UI (caixa alta, muito espaçada)
+  e JetBrains Mono para número. As fontes vão empacotadas no APK, então não há
+  caminho de fallback em runtime; sans-serif-condensed / monospace continuam sendo
+  a substituição correta caso alguém remova os .ttf.
+-->
+<resources>
+    <style name="Hud.Text" parent="">
+        <item name="android:fontFamily">@font/barlow_condensed</item>
+        <item name="android:textColor">@color/hud_ink</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- Nome do veículo: o único bloco de presença da tela. -->
+    <style name="Hud.Text.VehicleName" parent="Hud.Text">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:letterSpacing">0.09</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Subtítulo técnico: "2009 · 1.8 · MANUAL" -->
+    <style name="Hud.Text.Spec" parent="Hud.Text">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:letterSpacing">0.20</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/hud_ink_dim</item>
+    </style>
+
+    <!-- Rótulo de estrutura (SAÚDE, PRÓXIMA MANUTENÇÃO, nav). -->
+    <style name="Hud.Text.Label" parent="Hud.Text">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:letterSpacing">0.18</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/hud_ink_dim</item>
+    </style>
+
+    <!--
+      Odômetro. fontFeatureSettings="tnum" é obrigatório: sem dígitos tabulares o
+      número desloca na horizontal a cada atualização de km.
+    -->
+    <style name="Hud.Text.Odometer" parent="">
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- Unidade "KM", alinhada pela base do odômetro. -->
+    <style name="Hud.Text.Unit" parent="Hud.Text">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:letterSpacing">0.16</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/hud_ink_dim</item>
+    </style>
+
+    <!-- Número em linha (km restantes, contagens). -->
+    <style name="Hud.Text.Mono" parent="">
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/hud_ink</item>
+    </style>
+
+    <!-- Nome de peça na lista: sentence case, não caixa alta. -->
+    <style name="Hud.Text.Item" parent="Hud.Text">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Revisão do plano do fabricante: linha técnica, sem card. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/carbon_space_md"
+    android:paddingBottom="@dimen/carbon_space_md">
+
+    <TextView
+        android:id="@+id/textInterval"
+        style="@style/Carbon.Text.MetricSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/textItems"
+        style="@style/Carbon.Text.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/carbon_space_xs" />
+
+    <com.example.myapplication.ui.carbon.CarbonDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/carbon_space_sm" />
+</LinearLayout>

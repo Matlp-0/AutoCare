@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Revisão na timeline do Carbon UI: trilho vertical + marcador geométrico,
+  quilometragem como âncora forte e marcação manual sem componente Material.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <!-- Trilho -->
+    <FrameLayout
+        android:layout_width="24dp"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/railTop"
+            android:layout_width="@dimen/carbon_divider"
+            android:layout_height="18dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/carbon_line_strong" />
+
+        <View
+            android:id="@+id/railBottom"
+            android:layout_width="@dimen/carbon_divider"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@color/carbon_line_strong" />
+
+        <View
+            android:id="@+id/marker"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/carbon_space_md"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/carbon_space_md"
+        android:paddingBottom="@dimen/carbon_space_md">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textKm"
+                style="@style/Carbon.Text.MetricSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/textStateLabel"
+                style="@style/Carbon.Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="end"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textItems"
+            style="@style/Carbon.Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xs" />
+
+        <TextView
+            android:id="@+id/checkDone"
+            style="@style/Carbon.Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/carbon_touch_min"
+            android:layout_marginTop="@dimen/carbon_space_xs"
+            android:background="@drawable/carbon_detail_press"
+            android:clickable="true"
+            android:drawablePadding="@dimen/carbon_space_sm"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/carbon_space_md"
+            android:text="@string/schedule_mark_done"
+            android:textAllCaps="true" />
+
+        <com.example.myapplication.ui.carbon.CarbonDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_xs" />
+    </LinearLayout>
+</LinearLayout>

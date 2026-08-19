@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Carbon UI — estilos dos componentes usados nas telas internas.
+  Mantemos os widgets Material (validação, dropdown, diálogos continuam funcionando)
+  e trocamos apenas a pele: geometria reta, cores e tipografia do HUD.
+-->
+<resources>
+
+    <!-- Barra de topo -->
+    <style name="Carbon.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/carbon_bg</item>
+        <item name="titleTextAppearance">@style/Carbon.Toolbar.Title</item>
+        <item name="titleTextColor">@color/carbon_text_primary</item>
+        <item name="navigationIconTint">@color/carbon_cyan</item>
+    </style>
+
+    <style name="Carbon.Toolbar.Title" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.16</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Campos de formulário -->
+    <style name="Carbon.Input" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/carbon_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/carbon_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/carbon_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/carbon_radius</item>
+        <item name="boxStrokeColor">@color/carbon_input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">@dimen/carbon_rule</item>
+        <item name="hintTextColor">@color/carbon_cyan</item>
+        <item name="android:textColorHint">@color/carbon_text_dim</item>
+        <item name="errorTextColor">@color/carbon_alert</item>
+        <item name="errorIconTint">@color/carbon_alert</item>
+        <item name="boxStrokeErrorColor">@color/carbon_alert</item>
+        <item name="suffixTextColor">@color/carbon_text_secondary</item>
+        <item name="prefixTextColor">@color/carbon_text_secondary</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Carbon.Input</item>
+    </style>
+
+    <style name="Carbon.Input.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusTopStart">@dimen/carbon_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/carbon_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/carbon_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/carbon_radius</item>
+        <item name="boxStrokeColor">@color/carbon_input_stroke</item>
+        <item name="hintTextColor">@color/carbon_cyan</item>
+        <item name="android:textColorHint">@color/carbon_text_dim</item>
+        <item name="endIconTint">@color/carbon_cyan</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Carbon.Input</item>
+    </style>
+
+    <style name="ThemeOverlay.Carbon.Input" parent="">
+        <item name="colorPrimary">@color/carbon_cyan</item>
+        <item name="colorOnSurface">@color/carbon_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/carbon_text_secondary</item>
+        <item name="colorError">@color/carbon_alert</item>
+        <item name="editTextColor">@color/carbon_text_primary</item>
+        <item name="android:textColorPrimary">@color/carbon_text_primary</item>
+    </style>
+
+    <!-- Diálogos e bottom sheet: mesma geometria reta -->
+    <style name="ThemeOverlay.Carbon.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/carbon_cyan</item>
+        <item name="colorSurface">@color/carbon_surface_raised</item>
+        <!-- O Material 3 pinta diálogos com surface container, não com colorSurface. -->
+        <item name="colorSurfaceContainer">@color/carbon_surface_raised</item>
+        <item name="colorSurfaceContainerLow">@color/carbon_surface_raised</item>
+        <item name="colorSurfaceContainerHigh">@color/carbon_surface_raised</item>
+        <item name="colorSurfaceContainerHighest">@color/carbon_surface_raised</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="colorOnSurface">@color/carbon_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/carbon_text_secondary</item>
+        <item name="android:textColorPrimary">@color/carbon_text_primary</item>
+        <item name="shapeAppearanceOverlay">@style/Carbon.Shape.Square</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Carbon.Dialog.Title</item>
+    </style>
+
+    <style name="Carbon.Dialog.Title" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textColor">@color/carbon_text_primary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Carbon.Shape.Square" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/carbon_radius</item>
+    </style>
+
+    <style name="ThemeOverlay.Carbon.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="colorSurface">@color/carbon_surface_raised</item>
+        <item name="colorSurfaceContainerLow">@color/carbon_surface_raised</item>
+        <item name="colorOnSurface">@color/carbon_text_primary</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="bottomSheetStyle">@style/Carbon.BottomSheet</item>
+    </style>
+
+    <style name="Carbon.BottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="backgroundTint">@color/carbon_surface_raised</item>
+        <item name="shapeAppearanceOverlay">@style/Carbon.Shape.Square</item>
+    </style>
+</resources>
