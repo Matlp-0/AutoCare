@@ -125,6 +125,7 @@ public class MaintenanceScheduler {
     private Map<MaintenanceType, int[]> buildIntervals(List<ManualPlanEntry> plan,
                                                        Set<MaintenanceType> historyTypes) {
         Map<MaintenanceType, int[]> intervals = new EnumMap<>(MaintenanceType.class);
+        Map<MaintenanceType, int[]> planIntervals = new EnumMap<>(MaintenanceType.class);
         Set<MaintenanceType> types = new LinkedHashSet<>();
         if (historyTypes != null) {
             types.addAll(historyTypes);
@@ -141,21 +142,41 @@ public class MaintenanceScheduler {
             }
             intervals.put(type, new int[]{type.defaultIntervalKm(), type.defaultIntervalMonths()});
         }
+
         if (plan != null) {
             for (ManualPlanEntry entry : plan) {
                 for (MaintenanceType type : entry.items) {
-                    int[] current = intervals.get(type);
-                    if (current == null) {
-                        intervals.put(type, new int[]{entry.intervalKm, entry.intervalMonths});
-                    } else if (entry.intervalKm > 0 && entry.intervalKm < current[0]) {
-                        // A menor revisão que cita o item define a periodicidade.
-                        current[0] = entry.intervalKm;
-                        current[1] = entry.intervalMonths > 0 ? entry.intervalMonths : current[1];
+                    int[] candidate = new int[]{entry.intervalKm, entry.intervalMonths};
+                    int[] current = planIntervals.get(type);
+                    if (current == null || isMoreFrequent(candidate, current)) {
+                        planIntervals.put(type, candidate);
                     }
                 }
             }
         }
+
+        // Um intervalo explícito no manual substitui o fallback do catálogo,
+        // mesmo quando o manual usa uma periodicidade maior que o padrão.
+        for (Map.Entry<MaintenanceType, int[]> entry : planIntervals.entrySet()) {
+            intervals.put(entry.getKey(), entry.getValue());
+        }
         return intervals;
+    }
+
+    private boolean isMoreFrequent(int[] candidate, int[] current) {
+        if (candidate[0] > 0 && current[0] <= 0) {
+            return true;
+        }
+        if (candidate[0] > 0 && current[0] > 0) {
+            if (candidate[0] != current[0]) {
+                return candidate[0] < current[0];
+            }
+            return candidate[1] > 0 && (current[1] <= 0 || candidate[1] < current[1]);
+        }
+        if (candidate[0] <= 0 && current[0] > 0) {
+            return false;
+        }
+        return candidate[1] > 0 && (current[1] <= 0 || candidate[1] < current[1]);
     }
 
     private Map<MaintenanceType, Maintenance> lastExecutionByType(List<Maintenance> history,
