@@ -65,6 +65,23 @@ public class MaintenanceSchedulerTest {
     }
 
     @Test
+    public void manualPlanIntervalOverridesCatalogDefault() {
+        MaintenanceScheduler.Input input = new MaintenanceScheduler.Input();
+        input.vehicle = vehicle(151_000);
+        input.now = NOW;
+        input.plan = Collections.singletonList(new ManualPlanEntry(
+                15_000, 18, "Revisão específica do fabricante", MaintenanceType.OIL_CHANGE));
+
+        MaintenanceScheduler.Result result = new MaintenanceScheduler().calculate(input);
+
+        UpcomingMaintenance oilItem = find(result, MaintenanceType.OIL_CHANGE);
+        assertNotNull(oilItem);
+        assertEquals(15_000, oilItem.intervalKm);
+        assertEquals(18, oilItem.intervalMonths);
+        assertEquals(165_000, oilItem.nextDueKm);
+    }
+
+    @Test
     public void overdueItemDrivesVehicleStatusAndHealth() {
         Maintenance oil = new Maintenance();
         oil.id = 1;
