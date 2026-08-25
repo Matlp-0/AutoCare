@@ -50,6 +50,6 @@ public class UpcomingMaintenanceTest {
         maintenance.remainingDays = 300;
         maintenance.kmPaceDays = 60;
 
-        assertEquals("2.000 km · ≈ 60 dias", maintenance.remainingDetailed());
+        assertEquals("2.000 km · ≈ 2 meses", maintenance.remainingDetailed());
     }
 }
