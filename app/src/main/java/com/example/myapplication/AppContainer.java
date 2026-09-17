@@ -33,6 +33,10 @@ import com.example.myapplication.util.AppPreferences;
  */
 public class AppContainer {
 
+    // One queue prevents overlapping inference and model replacement, including across screens.
+    public final java.util.concurrent.ExecutorService assistantExecutor =
+            java.util.concurrent.Executors.newSingleThreadExecutor();
+    public final com.example.myapplication.data.ai.LocalModelStore localModelStore;
     public final AppDatabase database;
     public final VehicleRepository vehicleRepository;
     public final MaintenanceRepository maintenanceRepository;
@@ -54,6 +58,7 @@ public class AppContainer {
     public AppContainer(Context context) {
         Context appContext = context.getApplicationContext();
         database = AppDatabase.getInstance(appContext);
+        localModelStore = new com.example.myapplication.data.ai.LocalModelStore(appContext);
 
         interpreter = new MaintenanceInterpreter();
 

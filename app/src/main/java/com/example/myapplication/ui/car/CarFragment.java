@@ -135,6 +135,15 @@ public class CarFragment extends Fragment {
             }
         });
 
+        view.findViewById(R.id.buttonAssistant).setOnClickListener(clicked -> {
+            if (current == null || current.vehicle == null) return;
+            Intent intent = new Intent(requireContext(),
+                    com.example.myapplication.ui.assistant.AssistantActivity.class);
+            intent.putExtra(com.example.myapplication.ui.assistant.AssistantActivity.EXTRA_VEHICLE_ID,
+                    current.vehicle.id);
+            startActivity(intent);
+        });
+
         final TextView updatePlan = view.findViewById(R.id.buttonUpdatePlan);
         updatePlan.setOnClickListener(new View.OnClickListener() {
             @Override

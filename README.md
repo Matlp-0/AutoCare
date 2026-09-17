@@ -1,6 +1,6 @@
 # AutoCare
 
-App Android para acompanhar revisões, manutenções, abastecimentos e custos do carro. Os dados ficam no aparelho (Room/SQLite); a internet é usada apenas, e de forma opcional, para buscar o plano de revisões do fabricante.
+App Android para acompanhar revisões, manutenções, abastecimentos e custos do carro. Os dados ficam no aparelho (Room/SQLite); a internet é usada, de forma opcional, para buscar o plano de revisões do fabricante e baixar o modelo do assistente local.
 
 - **Package:** `com.example.myapplication` · **versionName** 1.5 (`versionCode` 2)
 - **minSdk** 33 · **targetSdk / compileSdk** 37 · **Java 11** (toolchain 25)
@@ -19,6 +19,7 @@ App Android para acompanhar revisões, manutenções, abastecimentos e custos do
 | Financeiro | Custo por km juntando manutenção + combustível, com gráfico mensal |
 | Importar nota | NF-e XML (parser direto) ou PDF/foto (OCR ML Kit) → sugestão de itens → tela de confirmação. Nada é gravado sem o usuário confirmar |
 | Exportar | Histórico completo de manutenções em PDF (A4) na pasta Downloads |
+| Assistente local (experimental) | Qwen3 1.7B no aparelho: explica cronograma e histórico, com download opcional de 1,1 GB e sem alterar registros |
 | Lembretes | Verificação diária via WorkManager, sobrevive a reboot e respeita Doze |
 
 ## Estrutura
@@ -88,3 +89,7 @@ Câmera é `required="false"`: usada só para fotografar notas na importação.
 - `AiVehicleManualProvider` é um espaço reservado e devolve `null`. Integrá-lo exige chave de API, que **não deve ser embutida no APK** — o caminho seguro é o app chamar um backend próprio que guarda a chave.
 - Saída de OCR é sempre sugestão: passa pela tela de confirmação antes de virar registro.
 - Fontes empacotadas: Barlow Condensed e JetBrains Mono (licenças OFL em `app/licenses/`).
+
+## IA local (prova de conceito)
+
+Acesse **Carro → Assistente de manutenção**. O motor llama.cpp está integrado ao APK; o modelo é baixado ou importado separadamente. Após o download, as respostas funcionam offline. Consulte [configuração, testes e limitações](docs/LOCAL_AI.md). O build também requer NDK 28.2.13676358 e CMake 3.22.1, que o Gradle pode instalar se as licenças do SDK estiverem aceitas.

@@ -66,6 +66,9 @@
             android:name=".ui.history.MaintenanceDetailActivity"
             android:exported="false" />
 
+        <activity android:name=".ui.assistant.AssistantActivity"
+            android:exported="false" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"

@@ -234,6 +234,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/carbon_space_sm" />
 
+        <TextView
+            android:id="@+id/buttonAssistant"
+            style="@style/Carbon.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/carbon_space_sm"
+            android:text="@string/ai_title" />
+
         <!-- APARÊNCIA -->
         <com.example.myapplication.ui.carbon.CarbonSectionTitle
             android:layout_width="match_parent"

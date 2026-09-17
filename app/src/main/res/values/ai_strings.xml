@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_title">Assistente de manutenção</string>
+    <string name="ai_description">Tire dúvidas sobre as manutenções usando os dados deste veículo. As respostas são geradas no celular.</string>
+    <string name="ai_model_description">Qwen3 1.7B · download opcional de 1,1 GB. Depois de baixar, funciona offline. Mantenha esta tela aberta durante o download e as respostas.</string>
+    <string name="ai_download">Baixar modelo · 1,1 GB</string>
+    <string name="ai_import">Importar arquivo do modelo</string>
+    <string name="ai_source">Ver modelo e licença no Hugging Face</string>
+    <string name="ai_delete">Remover modelo</string>
+    <string name="ai_delete_message">Libera cerca de 1,1 GB. O histórico do veículo será preservado.</string>
+    <string name="ai_ask_section">Como posso ajudar?</string>
+    <string name="ai_schedule">Explicar próximas manutenções</string>
+    <string name="ai_history">Resumir histórico</string>
+    <string name="ai_question_hint">Sua dúvida sobre manutenção</string>
+    <string name="ai_ask">Perguntar</string>
+    <string name="ai_cancel">Cancelar</string>
+    <string name="ai_note">Assistente experimental: pode errar. Confira as informações no manual ou com um profissional. Cada pergunta é independente e nenhuma resposta altera seus registros.</string>
+    <string name="ai_schedule_question">Explique minhas próximas manutenções e quais dados faltam para avaliar os prazos.</string>
+    <string name="ai_history_question">Resuma o histórico recente de manutenção deste veículo, destacando o que está registrado.</string>
+    <string name="ai_no_vehicle">Veículo não encontrado</string>
+    <string name="ai_no_browser">Nenhum navegador disponível.</string>
+</resources>
